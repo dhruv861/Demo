@@ -20,3 +20,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+print("Doing a task")
+print("Task Completed , Commit ")
