@@ -1,0 +1,40 @@
+{% extends 'jobportal/base.html' %}
+
+    {% block title %}
+        FlixCareers | Home
+    {% endblock title %}
+
+{% block content %}
+    {% for job in joblist %}
+    <div style="width: 75%;  margin: 40px auto;">
+        <div class="card" style="box-shadow:8px 8px 5px rgb(40 107 206 / 23%);">
+            
+            <b><h5 class="card-header" style="color:#4c5fd9;">{{job.title}}</h5></b>
+            <div class="card-body">
+                <div class="icon" style="display:flex;">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <h5 class="card-title" style="padding-left:10px; color:#00000099;">{{job.location.city}}</h5>
+                </div>
+                <div class="icon" style="display:flex;">
+                    <span class="material-symbols-outlined">
+                        currency_rupee
+                    </span>
+                    <h5 class="card-title" style="padding-left:10px;color:#00000099;">{{job.salary}}</h5>
+                </div>
+                <div class="icon" style="display:flex;" >
+                    <span class="material-symbols-outlined">
+                        schedule
+                    </span>
+                    <h5 class="card-title" style="padding-left:10px;color:#00000099;">{{job.job_type}}</h5>
+                </div>
+            
+            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+            <div style="padding:10px;padding-left: 5px;"><a href="{% url 'job_detail' job.id job.slug  %}" class="btn btn-primary" style="background-color:#4c5fd9">View Job</a></div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock content %}
+ 

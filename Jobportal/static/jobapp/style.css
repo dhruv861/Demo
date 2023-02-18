@@ -1,0 +1,25 @@
+#id_title,#id_salary,#id_author,
+#id_job_type,#id_city,#id_state,#id_country,#id_zipcode,
+#id_name,#id_company,#id_designation,
+#id_first_name,#id_last_name,#id_email,#id_option {
+
+  width: 100%;
+  border-radius: 5px;
+  border-color: aliceblue;
+  font-style: italic;
+}
+#id_description{
+  border: solid;
+  border-color: darkgray;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48;
+  color: #00000050;  
+}
